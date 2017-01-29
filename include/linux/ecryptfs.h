@@ -41,11 +41,13 @@
 #define RFC2440_CIPHER_AES_256 0x09
 #define RFC2440_CIPHER_TWOFISH 0x0a
 #define RFC2440_CIPHER_CAST_6 0x0b
+#define RFC2440_CIPHER_GOST 0x0c
 #if defined(CONFIG_MMC_DW_FMP_ECRYPT_FS) || defined(CONFIG_UFS_FMP_ECRYPT_FS)
 #define RFC2440_CIPHER_AES_XTS_256 0x0c
 #endif
 
 #define RFC2440_CIPHER_RSA 0x01
+#define RFC2440_CIPHER_GOST_94 0x02
 
 /**
  * For convenience, we may need to pass around the encrypted session
