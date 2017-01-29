@@ -53,7 +53,7 @@
 #include <linux/sec_ext.h>
 #endif
 
-#ifdef CONFIG_SOC_EXYNOS7880
+#ifdef CONFIG_SOC_EXYNOS7870
 #define CL0_MAX_VOLT		2000000
 #define CL1_MAX_VOLT		1750000
 #define CL0_MIN_VOLT		500000

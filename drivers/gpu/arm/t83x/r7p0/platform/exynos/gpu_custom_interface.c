@@ -29,7 +29,7 @@
 #endif /* CONFIG_CPU_THERMAL_IPA */
 #include "gpu_custom_interface.h"
 
-#ifdef CONFIG_SOC_EXYNOS7880
+#ifdef CONFIG_SOC_EXYNOS7870
 #define GPU_MAX_VOLT		1000000
 #define GPU_MIN_VOLT		500000
 #define GPU_VOLT_STEP		6250
