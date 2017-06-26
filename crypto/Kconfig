@@ -646,6 +646,15 @@ config CRYPTO_SHA512_ARM_NEON
 	  This code also includes SHA-384, a 384 bit hash with 192 bits
 	  of security against collision attacks.
 
+config CRYPTO_STRIBOG
+	tristate "GOST R 34.11 2012 algorithms"
+	select CRYPTO_HASH
+	help
+	  GOST R 34.11 2012 secure hash standard.
+	  
+	  This module implements 256-bit and 512-bit Russian GOST R hash
+	  algorihm.
+
 config CRYPTO_TGR192
 	tristate "Tiger digest algorithms"
 	select CRYPTO_HASH
@@ -700,6 +709,17 @@ config CRYPTO_AES
 	  The AES specifies three key sizes: 128, 192 and 256 bits
 
 	  See <http://csrc.nist.gov/CryptoToolkit/aes/> for more information.
+
+config CRYPTO_GOST
+	tristate "GOST cipher algorithms"
+	select CRYPTO_ALGAPI
+	help
+	  The GOST 28147-89 cipher.
+
+	  This is Russian standard cipher. It is better than DES, but not
+	  than AES. It is required to use in Russian certufued software.
+
+	  The GOST key size of 256 bits
 
 config CRYPTO_AES_586
 	tristate "AES cipher algorithms (i586)"

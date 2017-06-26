@@ -154,6 +154,8 @@ static int gpu_validate_attrib_data(struct exynos_context *platform)
 	platform->gpu_max_clock_limit = data == 0 ? 500 : (u32) data;
 	data = gpu_get_attrib_data(attrib, GPU_MIN_CLOCK);
 	platform->gpu_min_clock = data == 0 ? 160 : (u32) data;
+	data = gpu_get_attrib_data(attrib, GPU_MIN_CLOCK_LIMIT);
+	platform->gpu_min_clock_limit = data == 0 ? 260 : (u32) data;
 	data = gpu_get_attrib_data(attrib, GPU_DVFS_BL_CONFIG_CLOCK);
 	platform->gpu_dvfs_config_clock = data == 0 ? 266 : (u32) data;
 	data = gpu_get_attrib_data(attrib, GPU_DVFS_START_CLOCK);
@@ -230,6 +232,12 @@ static int gpu_validate_attrib_data(struct exynos_context *platform)
 	data = gpu_get_attrib_data(attrib, GPU_TEMP_THROTTLING4);
 	platform->tmu_lock_clk[THROTTLING4] = data == 0 ? 266 : (u32) data;
 	data = gpu_get_attrib_data(attrib, GPU_TEMP_THROTTLING5);
+	platform->tmu_lock_clk[THROTTLING5] = data == 0 ? 266 : (u32) data;
+	data = gpu_get_attrib_data(attrib, GPU_TEMP_THROTTLING6);
+	platform->tmu_lock_clk[THROTTLING5] = data == 0 ? 266 : (u32) data;
+	data = gpu_get_attrib_data(attrib, GPU_TEMP_THROTTLING7);
+	platform->tmu_lock_clk[THROTTLING5] = data == 0 ? 266 : (u32) data;
+	data = gpu_get_attrib_data(attrib, GPU_TEMP_THROTTLING8);
 	platform->tmu_lock_clk[THROTTLING5] = data == 0 ? 266 : (u32) data;
 	data = gpu_get_attrib_data(attrib, GPU_TEMP_TRIPPING);
 	platform->tmu_lock_clk[TRIPPING] = data == 0 ? 266 : (u32) data;
